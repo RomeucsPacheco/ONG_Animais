@@ -1,0 +1,328 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: Arial, sans-serif;
+scroll-behavior: smooth;
+}
+body {
+    color: black;
+    line-height: 1.6;
+}
+header {
+    background-color: white;
+    padding: 10x 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header nav {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+header .logo img {
+    height: 100px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: color 0.3s, background-color 0.3s;
+    border-radius: 10px;
+}
+
+header nav a:hover {
+    color: white;
+    background-color: #8d6e63;
+    border-radius: 10px;
+}
+
+main section {
+    padding: 40px;
+    border-bottom: 1px solid white;
+}
+
+#inicio .banner {
+    position: relative;
+    text-align: center;
+    color: black;
+}
+
+.banner img {
+    width: 100%;
+    height: 400px;
+    border-radius: 8px;
+}
+
+#inicio .banner-text {
+    position: absolute;
+    color: black;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+#destaques {
+    text-align: center;
+    padding-top: 40px;
+}
+
+.destaques-container {
+    display: flex; 
+    flex-wrap: nowrap; 
+    overflow-x: auto; 
+    overflow-y: hidden; 
+    gap: 20px; 
+    padding-bottom: 15px; 
+}
+
+.destaque-item {
+    display: flex;
+}
+
+.destaques-item img {
+    width: 600px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+#adocao h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.tabela-animais {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+.tabela-animais th, .tabela-animais td {
+    border: 1px solid rgb(0, 0, 0);
+    padding: 12px;
+    text-align: left;
+}
+.tabela-animais th {
+    background-color: rgb(189, 189, 189);
+    font-weight: bold;
+}
+.tabela-animais tbody tr:ntg-child(even){
+    background-color: white;
+}
+.tabela-animais tbody tr:hover {
+    background-color: white;
+}
+
+#ajudar h2{
+    text-align: center;
+    margin-bottom: 20px;
+}
+#ajudar ul{
+    list-style: none;
+    max-width: 800px;
+    margin: 0 auto;
+}
+#ajudar li{
+    background-color: white;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-left: 5px solid #8D6E63;
+}
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+footer .redes-sociais {
+    margin: 15px 0;
+}
+footer .redes-sociais a{
+    color: white;
+    margin: 0 10px;
+    font-size: 24px;
+    text-decoration: none;
+}
+footer .redes-sociais a:hover {
+    color: #8D6E63;
+}
+footer .copyright {
+    margin-top: 15px;
+    font-size: 1em;
+}
+
+/* --- Estilos para a Página de Cadastro --- */
+#cadastro-form {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#cadastro-form h2, #cadastro-form p {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn-submit {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #8d6e63;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #6d4c41;
+}
+
+/* --- Estilos para a Loja Solidária --- */
+#loja {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.loja-container {
+    display: flex; /* Ativa o Flexbox */
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+    justify-content: center; /* Centraliza os itens na linha */
+    gap: 20px; /* Espaço entre os cards */
+    margin-top: 30px;
+}
+
+.produto-card {
+    background-color: white;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    width: 300px; /* Largura fixa para cada card */
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Organiza o conteúdo do card em coluna */
+    align-items: center; /* Centraliza o conteúdo do card */
+}
+
+.produto-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.produto-card h3 {
+    margin-bottom: 10px;
+}
+
+.produto-card p {
+    flex-grow: 1; /* Faz a descrição ocupar o espaço disponível */
+    margin-bottom: 15px;
+}
+
+.btn-produto {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #8d6e63;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-produto:hover {
+    background-color: #6d4c41;
+}
+
+/* --- Estilos para a Página de FAQ --- */
+#faq {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+#faq h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.faq-item {
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.faq-question {
+    width: 100%;
+    background-color: #f1f1f1;
+    border: none;
+    padding: 15px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+}
+
+.faq-question::after { /* Adiciona um ícone de '+' */
+    content: '+';
+    font-size: 20px;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.faq-question.active::after { /* Muda o ícone para '-' quando ativo */
+    content: '−';
+}
+
+.faq-answer {
+    padding: 0 15px; /* Espaçamento interno */
+    max-height: 0; /* Começa com altura 0, escondido */
+    overflow: hidden; /* Esconde o conteúdo que transborda */
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out; /* Animação suave */
+}
+
+.faq-answer p {
+    padding: 15px 0;
+}
